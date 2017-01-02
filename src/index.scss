@@ -2,14 +2,19 @@
 
 body {
   background: $beige1;
-  color: $grey;
+  color: $blue2;
   font-family: $sans;
   margin: 0;
   padding: 0;
 }
 
 .title {
+  border-bottom: 1px solid $rib;
   font-family: $serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  padding: 5px 10px;
+  text-transform: uppercase;
 }
 
 .layer-one {
@@ -27,6 +32,6 @@ body {
 }
 
 .level {
-  background: $blue1;
-  display: inline-block;
+  background: $grey1;
+  display: inline-flex;
 }

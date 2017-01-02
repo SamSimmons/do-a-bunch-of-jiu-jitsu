@@ -1,0 +1,10 @@
+@import '../../vars';
+
+.this-week {
+  box-shadow: 0 2px 1px 0 $blue2;
+  flex-flow: column;
+  margin: 20px;
+  position: absolute;
+  right: 0;
+  top: 40vh;
+}

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Hours from '../Hours'
 import Nav from '../Nav'
+import AddTime from '../AddTime'
+import Tracker from '../Tracker'
+import ThisWeek from '../ThisWeek'
 
 const hours = {
   hoursLeft: 300,
@@ -16,6 +19,9 @@ class App extends Component {
         </div>
         <div className="layer-two">
             <Nav />
+            <AddTime />
+            <Tracker />
+            <ThisWeek />
         </div>
       </div>
     )

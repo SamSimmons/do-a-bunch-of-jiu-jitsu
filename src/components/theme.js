@@ -24,8 +24,8 @@ const fontSize = 14
 
 // Layout
 const baseProps = {
-  width: 450,
-  height: 300,
+  width: 300,
+  height: 200,
   padding: 30,
   colorScale: colors
 }
@@ -143,9 +143,11 @@ const theme = {
       })
     },
     colorScale: colors,
-    width: 400,
-    height: 400,
-    padding: 50
+    width: 250,
+    height: 250,
+    padding: 60,
+    innerRadius: 40,
+    labelRadius: 75
   },
   scatter: assign({
     style: {

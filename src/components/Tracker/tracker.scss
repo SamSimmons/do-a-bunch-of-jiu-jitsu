@@ -1,0 +1,29 @@
+@import '../../vars';
+
+.tracker {
+  bottom: 10vh;
+  box-shadow: 0 2px 1px 0 $blue2;
+  flex-flow: column;
+  left: 10vw;
+  margin: 20px;
+  position: absolute;
+  width: 200px;
+}
+
+.block-container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: row wrap;
+}
+
+.block {
+  border: 1px solid $blue2;
+  box-sizing: border-box;
+  display: inline-block;
+  flex: 0 0 20px;
+  height: 20px;
+}
+
+.block--true {
+  background: $blue2;
+}
