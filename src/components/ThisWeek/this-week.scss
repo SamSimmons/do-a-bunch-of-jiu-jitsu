@@ -1,7 +1,7 @@
 @import '../../vars';
 
 .this-week {
-  box-shadow: 0 2px 1px 0 $blue2;
+  box-shadow: 1px -1px 0 1px $beige2, -2px 2px 1px 1px $blue-shadow;
   flex-flow: column;
   margin: 20px;
   position: absolute;

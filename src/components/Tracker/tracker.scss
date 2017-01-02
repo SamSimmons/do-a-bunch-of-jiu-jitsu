@@ -2,7 +2,7 @@
 
 .tracker {
   bottom: 10vh;
-  box-shadow: 0 2px 1px 0 $blue2;
+  box-shadow: 1px -1px 0 1px $beige2, -2px 2px 1px 1px $blue-shadow;
   flex-flow: column;
   left: 10vw;
   margin: 20px;

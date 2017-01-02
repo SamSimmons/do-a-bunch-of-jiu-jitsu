@@ -1,7 +1,7 @@
 @import '../../vars';
 
 nav {
-  box-shadow: -1px 2px 1px 0 $blue2;
+  box-shadow: 1px -1px 0 1px $beige2, -1px 1px 2px 1px $blue-shadow;
   font-family: $serif;
   font-style: italic;
   letter-spacing: .1em;
