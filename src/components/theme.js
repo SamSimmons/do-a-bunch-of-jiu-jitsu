@@ -1,11 +1,7 @@
 import { assign } from 'lodash'
 
-const $beige1 = "#ded8be"
-const $beige2 = "#babdac"
 const $grey = "#405453"
-const $white = "#fefefe"
 const $sans = 'Karla'
-const $serif = 'Arvo'
 
 
 const colors = [
