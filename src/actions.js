@@ -20,3 +20,39 @@ export function setPartialHours(val) {
     val
   }
 }
+
+export const INCREMENT_WHOLE_HOURS = "INCREMENT_WHOLE_HOURS"
+export function incrementWholeHours() {
+  return {
+    type: INCREMENT_WHOLE_HOURS
+  }
+}
+
+export const DECREMENT_WHOLE_HOURS = "DECREMENT_WHOLE_HOURS"
+export function decrementWholeHours() {
+  return {
+    type: DECREMENT_WHOLE_HOURS
+  }
+}
+
+export const INCREMENT_PARTIAL_HOURS = "INCREMENT_PARTIAL_HOURS"
+export function incrementPartialHours() {
+  return {
+    type: INCREMENT_PARTIAL_HOURS
+  }
+}
+
+export const DECREMENT_PARTIAL_HOURS = "DECREMENT_PARTIAL_HOURS"
+export function decrementPartialHours() {
+  return {
+    type: DECREMENT_PARTIAL_HOURS
+  }
+}
+
+export const SET_DATE = "SET_DATE"
+export function setDate(date) {
+  return {
+    type: SET_DATE,
+    date
+  }
+}
