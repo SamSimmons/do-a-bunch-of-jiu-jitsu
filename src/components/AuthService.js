@@ -14,6 +14,7 @@ export default class AuthService {
 
   _doAuthentication(authResult) {
     this.setToken(authResult.idToken)
+    window.location.reload(true)
   }
 
   login() {
@@ -34,5 +35,6 @@ export default class AuthService {
 
   logout() {
     localStorage.removeItem('id_token')
+    window.location.reload(true)
   }
 }

@@ -1,5 +1,6 @@
 import {
-  USER_LOG_IN
+  USER_LOG_IN,
+  USER_LOG_OUT
 } from '../actions/auth-actions'
 
 export default function(state = {loggedIn: false}, action) {
@@ -8,6 +9,12 @@ export default function(state = {loggedIn: false}, action) {
       return {
         ...state,
         loggedIn: true
+      }
+    }
+    case USER_LOG_OUT: {
+      return {
+        ...state,
+        loggedIn: false
       }
     }
     default: return state

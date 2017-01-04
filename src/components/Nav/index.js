@@ -1,13 +1,24 @@
 import React from 'react'
 import './nav.scss'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as actions from '../../actions/auth-actions'
 
 const Nav = (props) => {
   return (
     <nav className="level">
-      <span>Register</span>
       <span>Edit</span>
+      <span
+        onClick={() => {
+          props.auth.logout()
+          props.logOut()
+        }
+      }>Logout</span>
     </nav>
   )
 }
 
-export default Nav
+const mapStateToProps = state => ({...state.auth})
+const mapActionCreatorsToProps = dispatch => bindActionCreators(actions, dispatch)
+
+export default connect(mapStateToProps, mapActionCreatorsToProps)(Nav)

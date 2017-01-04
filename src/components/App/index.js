@@ -9,7 +9,6 @@ import Login from '../Login'
 import AuthService from '../AuthService'
 
 const auth = new AuthService(process.env.REACT_APP_AUTH_ID, process.env.REACT_APP_AUTH_DOMAIN)
-console.log(auth.loggedIn())
 
 const hours = {
   hoursLeft: 300,
@@ -18,7 +17,8 @@ const hours = {
 
 class App extends Component {
   render() {
-    if (!auth.loggedIn) {
+    console.log('logged in', auth.loggedIn())
+    if (!auth.loggedIn()) {
       return <Login auth={auth} />
     }
     return (
@@ -27,7 +27,7 @@ class App extends Component {
           <Hours {...hours} />
         </div>
         <div className="layer-two">
-            <Nav />
+            <Nav auth={auth} />
             <AddTime />
             <Tracker />
             <ThisWeek />

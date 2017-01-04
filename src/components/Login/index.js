@@ -11,7 +11,7 @@ class Login extends Component {
     return (
       <div className="login-wrapper">
         <div className="login">
-          <button onClick={this.props.logIn}>Log in</button>
+          <button onClick={auth.login}>Log in</button>
           <button onClick={auth.login}>Register</button>
         </div>
       </div>
