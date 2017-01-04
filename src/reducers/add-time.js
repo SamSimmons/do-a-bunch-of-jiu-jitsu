@@ -6,7 +6,7 @@ import {
   INCREMENT_PARTIAL_HOURS,
   DECREMENT_PARTIAL_HOURS,
   SET_DATE
-} from '../actions'
+} from '../actions/dashboard-actions'
 
 const defaultState = {
   wholeHours: 0,

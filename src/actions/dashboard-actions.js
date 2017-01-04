@@ -1,10 +1,3 @@
-export const TEST = "TEST"
-export function testRedux() {
-  return {
-    type: TEST
-  }
-}
-
 export const SET_WHOLE_HOURS = "SET_WHOLE_HOURS"
 export function setWholeHours(val) {
   return {

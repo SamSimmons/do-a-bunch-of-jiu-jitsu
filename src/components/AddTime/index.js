@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import DatePicker from 'react-datepicker'
-import * as actions from '../../actions'
+import * as actions from '../../actions/dashboard-actions'
 import './add-time.scss'
 import 'react-datepicker/dist/react-datepicker.css'
 

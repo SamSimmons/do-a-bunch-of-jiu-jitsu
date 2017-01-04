@@ -1,0 +1,15 @@
+@import '../../vars';
+
+.login-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login {
+  border: 1px solid $blue1;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
