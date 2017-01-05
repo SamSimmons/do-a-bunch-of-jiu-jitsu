@@ -1,6 +1,7 @@
 import {
   USER_LOG_IN,
-  USER_LOG_OUT
+  USER_LOG_OUT,
+  USER_DATA_AVAILABLE
 } from '../actions/auth-actions'
 
 export default function(state = {loggedIn: false}, action) {

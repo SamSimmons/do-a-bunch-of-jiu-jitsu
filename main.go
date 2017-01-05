@@ -2,9 +2,10 @@ package main
 
 import (
   "encoding/json"
+  "encoding/base64"
   "net/http"
   "os"
-  "time"
+  "log"
   "github.com/gorilla/handlers"
   "github.com/gorilla/mux"
   "github.com/auth0/go-jwt-middleware"
@@ -27,24 +28,23 @@ func main() {
 
   r.Handle("/status", StatusHandler).Methods("GET")
   r.Handle("/user", jwtMiddleware.Handler(UserHandler)).Methods("GET")
+  // r.Handle("/user", UserHandler).Methods("GET")
   r.Handle("/add-time", NotImplemented).Methods("GET")
   r.Handle("/register", NotImplemented).Methods("POST")
 
   // Our application will run on port 3000. Here we declare the port and pass in our router.
   loggedRouter := handlers.LoggingHandler(os.Stdout, r)
-  http.ListenAndServe(":3000", loggedRouter)
+  http.ListenAndServe(":4000", loggedRouter)
 }
 
 type User struct {
-  Id int
-  Name string
-  Email string
-  HoursLeft string
-  HoursComplete string
-  HoursGoal string
+  Id int `json:"id"`
+  Name string `json:"name"`
+  Email string `json:"email"`
+  HoursLeft string `json:"hoursLeft"`
+  HoursComplete string `json:"hoursComplete"`
+  HoursGoal string `json:"hoursGoal"`
 }
-
-var mySigningKey = []byte("secret")
 
 var user = User{
   Id: 1,
@@ -62,6 +62,7 @@ var StatusHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request
 var UserHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
   payload, _ := json.Marshal(user)
   w.Header().Set("Content-Type", "application/json")
+  w.Header().Set("Access-Control-Allow-Origin", "*")
   w.Write([]byte(payload))
 })
 

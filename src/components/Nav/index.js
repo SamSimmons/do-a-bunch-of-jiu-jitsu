@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import * as actions from '../../actions/auth-actions'
 
 const Nav = (props) => {
+  const token = props.auth.getToken()
+  props.getUserData(token)
   return (
     <nav className="level">
       <span>Edit</span>

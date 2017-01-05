@@ -2,6 +2,7 @@
   "name": "do-a-bunch-of-jiu-jitsu",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4000",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
@@ -48,6 +49,7 @@
   },
   "dependencies": {
     "auth0-lock": "^10.8.1",
+    "axios": "^0.15.3",
     "moment": "^2.17.1",
     "node-sass": "^4.1.1",
     "react": "^15.4.1",
