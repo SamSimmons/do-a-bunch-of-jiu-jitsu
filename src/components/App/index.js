@@ -12,7 +12,7 @@ const auth = new AuthService(process.env.REACT_APP_AUTH_ID, process.env.REACT_AP
 
 class App extends Component {
   render() {
-    console.log('logged in', auth.loggedIn())
+    // console.log('logged in', auth.getProfile())
     if (!auth.loggedIn()) {
       return <Login auth={auth} />
     }

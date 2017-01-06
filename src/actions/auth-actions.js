@@ -1,7 +1,8 @@
-export const USER_LOG_IN = "USER_LOG_IN"
-export function logIn() {
+export const USER_LOGIN = "USER_LOGIN"
+export function userLogin(user) {
   return {
-    type: USER_LOG_IN
+    type: USER_LOGIN,
+    user
   }
 }
 

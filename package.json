@@ -2,7 +2,7 @@
   "name": "do-a-bunch-of-jiu-jitsu",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
+  "proxy": "http://localhost:9000",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",

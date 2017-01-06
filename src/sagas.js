@@ -2,7 +2,8 @@ import { put, take, fork } from 'redux-saga/effects'
 import axios from 'axios'
 import {
   REQUEST_USER_DATA,
-  USER_DATA_AVAILABLE
+  USER_DATA_AVAILABLE,
+  USER_LOGIN
 } from './actions/auth-actions'
 import {
   SUBMIT_NEW_HOURS,
@@ -44,5 +45,12 @@ export function* watchForHoursUpdate() {
     const action = yield take(SUBMIT_NEW_HOURS)
     const nextUserData = yield sendNextHours(action.hours)
     yield put(updateHours(nextUserData))
+  }
+}
+
+export function* watchForLogin() {
+  while (true) {
+    const action = yield take(USER_LOGIN)
+    console.log("user has logged in", action)
   }
 }

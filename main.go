@@ -13,9 +13,13 @@ import (
   "github.com/auth0/go-jwt-middleware"
   "github.com/dgrijalva/jwt-go"
   "github.com/joho/godotenv"
+  "github.com/jinzhu/gorm"
 )
 
+var DB *gorm.DB
+
 func main() {
+  InitDB()
   err := godotenv.Load()
   if err != nil {
     log.Fatal("Error loading .env file")
@@ -36,7 +40,7 @@ func main() {
 
   // Our application will run on port 3000. Here we declare the port and pass in our router.
   loggedRouter := handlers.LoggingHandler(os.Stdout, r)
-  http.ListenAndServe(":4000", loggedRouter)
+  http.ListenAndServe(":9000", loggedRouter)
 }
 
 type User struct {

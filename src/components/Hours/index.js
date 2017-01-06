@@ -5,7 +5,7 @@ import theme from '../theme'
 import './hours.scss'
 
 const Hours = (props) => {
-  console.log(props)
+  // console.log(props)
   if (!props.hoursLeft) {
     return (
       <div className="loading">loading</div>
