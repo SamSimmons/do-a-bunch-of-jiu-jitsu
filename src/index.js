@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux'
 import reducer from './reducers'
 import { Provider } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
-import { watchForUserRequest } from './sagas'
+import { watchForUserRequest, watchForHoursUpdate } from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
@@ -15,6 +15,7 @@ const store = createStore(
   applyMiddleware(sagaMiddleware)
 )
 sagaMiddleware.run(watchForUserRequest)
+sagaMiddleware.run(watchForHoursUpdate)
 
 ReactDOM.render(
   <Provider store={store}>

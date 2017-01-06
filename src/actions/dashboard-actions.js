@@ -49,3 +49,19 @@ export function setDate(date) {
     date
   }
 }
+
+export const SUBMIT_NEW_HOURS = "SUBMIT_NEW_HOURS"
+export function submitNewHours(hours) {
+  return {
+    type: SUBMIT_NEW_HOURS,
+    hours
+  }
+}
+
+export const UPDATE_HOURS = "UPDATE_HOURS"
+export function updateHours(nextUserData) {
+  return {
+    type: UPDATE_HOURS,
+    nextUserData
+  }
+}

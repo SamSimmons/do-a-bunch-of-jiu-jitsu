@@ -38,7 +38,7 @@ const AddTime = (props) => {
         </div>
       </div>
       <DatePicker selected={props.date} dateFormat="DD/MM/YYYY" onChange={(e) => props.setDate(e)}/>
-      <button onClick={props.testRedux}>SUBMIT</button>
+      <button onClick={() => props.submitNewHours(`${props.wholeHours}.${props.partialHours}`)}>SUBMIT</button>
     </div>
   )
 }
